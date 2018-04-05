@@ -136,9 +136,9 @@
   <div class="userinput">
    <label>City </label>
    <select name="city">
-    <option value="1">Lahore</option>
-    <option value="2">Karachi</option>
-    <option value="3">Islamabad </option>
+    <option value="1">Rajkot</option>
+    <option value="2">Surat</option>
+    <option value="3">Ahmedabad </option>
    </select>
   </div>
   

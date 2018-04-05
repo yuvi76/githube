@@ -56,11 +56,15 @@ public class ControllerServlet extends HttpServlet {
 		conn.setRequestProperty("Accept", "application/json");
                 
 		//if (conn.getResponseCode() != 200) {
-			//throw new RuntimeException("Failed : HTTP error code : "
-			//		+ conn.getResponseCode());
+		//	throw new RuntimeException("Failed : HTTP error code : "
+		//			+ conn.getResponseCode());
 		//}
                 if (conn.getResponseCode() == 204) {
-			out.println("You are not enrolled to our institute");
+			 out.println("<script type=\"text/javascript\">");
+                         out.println("alert('You are not enrolled to our institute');");
+                         out.println("</script>");
+                         //response.sendRedirect("Web Pages/UIPage.jsp");
+                         
 		}
                 
                 
