@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author abc
  */
-public class ServletUI extends HttpServlet {
+public class UI extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,18 +31,15 @@ public class ServletUI extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-             out.println(
-         "<html>\n" +
-            "<head></head>\n" +
-            "<body>" +
-               "<h1 align = \"center\"> Placement Registration Form  </h1>\n" +
-               "<ul>\n" +
-                  "  <li><b>First Name</b>: "
-                  +"<input type= 'text' size=10 " + "\n" +
-                  "  <li><b>Last Name</b>: "
-                  + "<input type='text' size=10>" + "\n" +
-               "</ul>\n" +
-            "</body></html>");
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet UI</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet UI at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
