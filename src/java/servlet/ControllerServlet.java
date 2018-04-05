@@ -19,6 +19,7 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import javax.json.JsonValue;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -62,8 +63,12 @@ public class ControllerServlet extends HttpServlet {
                 if (conn.getResponseCode() == 204) {
 			 out.println("<script type=\"text/javascript\">");
                          out.println("alert('You are not enrolled to our institute');");
+                         out.println("window.location.href='UIPage.jsp'");
                          out.println("</script>");
                          //response.sendRedirect("Web Pages/UIPage.jsp");
+                       //  RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WebPages/UIPage.jsp");
+                         // dispatcher.forward(request, response);
+                         
                          
 		}
                 
@@ -96,13 +101,13 @@ public class ControllerServlet extends HttpServlet {
                                 Iterator<Map.Entry<String, JsonValue>> i1 = s1.iterator();
                                  while(i1.hasNext()) {
                                      Map.Entry<String, JsonValue> e1 = i1.next();
-                                     out.println("Key: "+ e1.getKey());
-                                     out.println("Value: "+e1.getValue());
+                                    // out.println("Key: "+ e1.getKey());
+                                     //out.println("Value: "+e1.getValue());
                                  }
                            }
                            else {
-                           out.println(e.getKey());
-                           out.println(e.getValue());
+                           //out.println(e.getKey());
+                           //out.println(e.getValue());
                            }
                        }
                        
